@@ -21,7 +21,7 @@ export const ListContainer: React.FC = () => {
   }, [groceryList])
 
   return (
-    <section className="groceryApp">
+    <section className="groceryApp flex justify-center">
       <div className="listInputs">
         <ListInputs addItem={item => dispatch(addItem(item))} />
       </div>
