@@ -12,7 +12,7 @@ This exercise should take anywhere from 1 - 2 hours.
 
 You are a freelance developer who has been tasked with the responsibility of writing a grocery list application for a client of yours. You have inherited a bit of code from a previous developer so bits and pieces of the application have been completed. Your job is to finish what they started and complete the grocery list application.
 
-After taking a look at the application, you have assesed that you need to complete the following items that the other developer didn't finish
+After taking a look at the application, you have assessed that you need to complete the following items that the other developer didn't finish.
 
 #### Tasks
 
