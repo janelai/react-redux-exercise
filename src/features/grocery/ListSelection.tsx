@@ -37,7 +37,7 @@ const ListSelection = () => {
                 }
             </div>
             <button 
-                className="mt-4 bg-gray-500 text-white px-3 py-1 rounded"
+                className="bg-blue-500 text-white px-2 py-1 rounded mr-2"
                 onClick={handleDeselectItem}
             >
                 Deselect
