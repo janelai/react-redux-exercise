@@ -12,36 +12,27 @@ const ListSelection = () => {
         dispatch(deselectItem());
     };
 
-    if (!isItemSelected) {
-        return (
-            <div className="mt-4 p-4 border rounded bg-blue-50">
-                <h3 className="text-lg font-medium">Selected Item Details</h3>
-                <div className="mt-2">
-                    <p>No item selected</p>
+    return (
+        <div className="listSelection">
+            <div className="min-w-full table-fixed border-separate border-spacing-x-10 border-spacing-y-0">
+                <h3>Selected Item Details</h3>
+                <div>
+                    {!isItemSelected ? (
+                        <p>No item selected</p>
+                    ) : ( <>
+                            <p><strong>Name:</strong> {selectedItem.name}</p>
+                            <p><strong>Category:</strong> {selectedItem.category}</p>
+                            <p><strong>Delivery Method:</strong> {selectedItem.deliveryMethod}</p>
+                            <button 
+                                className="bg-blue-500 text-white px-2 py-1 rounded mr-2"
+                                onClick={handleDeselectItem}
+                            >
+                                Deselect
+                            </button>
+                        </> )
+                    }
                 </div>
             </div>
-        )
-    }
-
-    return (
-        <div className="mt-4 p-4 border rounded bg-blue-50">
-            <h3 className="text-lg font-medium">Selected Item Details</h3>
-            <div className="mt-2">
-                {!isItemSelected ? (
-                    <p>No item selected</p>
-                ) : ( <>
-                        <p><strong>Name:</strong> {selectedItem.name}</p>
-                        <p><strong>Category:</strong> {selectedItem.category}</p>
-                        <p><strong>Delivery Method:</strong> {selectedItem.deliveryMethod}</p>
-                    </> )
-                }
-            </div>
-            <button 
-                className="bg-blue-500 text-white px-2 py-1 rounded mr-2"
-                onClick={handleDeselectItem}
-            >
-                Deselect
-            </button>
         </div>
     );
 };
