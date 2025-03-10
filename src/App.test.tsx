@@ -81,6 +81,7 @@ describe("ListTable tests", () => {
     const deselectButtons = screen.getAllByText("Deselect");
     await user.click(deselectButtons[0]);
     
+    // check properties
     expect(store.getState().grocery.isItemSelected).toBe(false);
   });
 
@@ -120,6 +121,7 @@ describe("ListSelection tests", () => {
 
     cleanup();
 
+    // check that selected item shows in listSelection
     const {} = renderWithProviders(<ListSelection />, {
       preloadedState: currentState});
       expect(screen.getByText("Bananas")).toBeInTheDocument();
