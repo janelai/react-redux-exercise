@@ -55,6 +55,8 @@ Good luck!
 
 
 ## Resources Used
+- https://redux-toolkit.js.org/api/createSlice - helpful for seeing how slices worked.
+- https://redux.js.org/usage/usage-with-typescript - info on what PayloadAction is from redux toolkit.
 - https://react.dev/reference/react/useEffect - using useEffect hook in ListTable.
 - https://testing-library.com/docs/react-testing-library/example-intro - helpful for examples on how to write tests.
 - https://medium.com/@voonlihhaur/when-to-describe-it-and-test-ec2aba477b59 - difference between describe and test.

@@ -60,6 +60,8 @@ export const grocerySlice = createSlice({
 
     removeItem: (state, action: PayloadAction<number>) => {
       // Write a custom reducer that will remove an item from the list array
+      // PayloadAction<number> means the action carries a number (ID number)
+      // creates list with everything but that item
       state.list = state.list.filter(item => item.id !== action.payload);
       
       if (state.isItemSelected && state.selectedItem.id === action.payload) {
@@ -77,6 +79,7 @@ export const grocerySlice = createSlice({
       // Write a custom reducer that will select an item
       const itemToSelect = state.list.find(item => item.id === action.payload);
   
+      // find item in state list given ID
       if (itemToSelect) {
         state.isItemSelected = true;
         state.selectedItem = itemToSelect;

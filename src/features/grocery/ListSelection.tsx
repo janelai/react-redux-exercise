@@ -4,9 +4,9 @@ import { deselectItem } from './grocerySlice';
 
 const ListSelection = () => {
 
-    const selectedItem = useAppSelector((state) => state.grocery.selectedItem);
+    const selectedItem = useAppSelector((state) => state.grocery.selectedItem);  // hook to grab item properties
     const isItemSelected = useAppSelector((state) => state.grocery.isItemSelected);
-    const dispatch = useAppDispatch();
+    const dispatch = useAppDispatch();  // used to handle deselect action
     
     const handleDeselectItem = () => {
         dispatch(deselectItem());
