@@ -52,3 +52,10 @@ When you're finished, be sure to push up the completed code to your github and p
 In addition, keep it locally and then bring it into your interview. We'll walk through what you did and how you did it. Again don't be worried if you can't get everything working. Words on a screen aren't too important to us, we care more about the concepts and the ways that you went about solving the problems that you're presented with. Keep a mental note of the resources you used to accomplish these problems as we'll be asking you to talk through how you went about solving for something that you previously didn't understand.
 
 Good luck!
+
+
+## Resources Used
+- https://react.dev/reference/react/useEffect - using useEffect hook in ListTable.
+- https://testing-library.com/docs/react-testing-library/example-intro - helpful for examples on how to write tests.
+- https://medium.com/@voonlihhaur/when-to-describe-it-and-test-ec2aba477b59 - difference between describe and test.
+- https://testing-library.com/docs/queries/byrole/ - grabbing items by role.

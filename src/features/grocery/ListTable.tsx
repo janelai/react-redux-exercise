@@ -4,8 +4,8 @@ import { removeItem, selectItem, deselectItem } from './grocerySlice';
 
 export const ListTable = () => {
 
-  const groceryList = useAppSelector((state) => state.grocery.list);
-  const dispatch = useAppDispatch();
+  const groceryList = useAppSelector((state) => state.grocery.list);  // hook to extract grocery list from redux store
+  const dispatch = useAppDispatch();  // hook to return action
   const [searchTerm, setSearchTerm] = useState('');  // state for search
   const [filteredItems, setFilteredItems] = useState(groceryList);  // state for filtered search items
 
@@ -21,7 +21,7 @@ export const ListTable = () => {
     dispatch(deselectItem());
   };
 
-  // update based on search or grocery items
+  // hook to update based on search or grocery items
   useEffect(() => {
     if (searchTerm.trim() === '') {
       // show all items when there is no search
@@ -34,8 +34,9 @@ export const ListTable = () => {
       );
       setFilteredItems(filtered);
     }
-  }, [searchTerm, groceryList]);
+  }, [searchTerm, groceryList]);  // runs whenever searchTerm or groceryList are updated
 
+  // handler for getting initial user input
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(e.target.value);
   };
